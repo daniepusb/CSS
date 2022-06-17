@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+body{
+  background: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 0;
+}
+.container:hover .overlay {
+  transform: translate(-100%,-100%) ;
+  will-change: transform;
+  width: 100%;
+  border-radius: 0 0 -45% 0 ;
+}  
+.overlay{
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+  transition: 2s transform, 2s with ease-in-out;
+  will-change: transform;
+  z-index: 100;
+}
